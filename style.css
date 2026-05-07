@@ -1,0 +1,49 @@
+.navbar {
+    background-color: #1a3a2a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.nav-link-custom {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    transition: all 0.2s;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: #f8f9f7;
+    background-color: #2d6a4f;
+    border-radius: 8px;
+}
+
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("hero.avif");
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    min-height: 50vh;
+    color: #f8f9f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.hero-btn{
+    background-color: #f8f9f7;
+    color: #1a3a2a;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+
+}
