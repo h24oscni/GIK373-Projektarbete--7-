@@ -38,3 +38,5 @@ const labels = [
   
 //Lektion 2
 
+// komentar 
+
