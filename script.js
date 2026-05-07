@@ -1,3 +1,4 @@
+//Lektion 1 
 const labels = [
     'Avesta',
     'Borlänge',
@@ -35,3 +36,5 @@ const labels = [
   
   const myChart = new Chart(canvasElement, config);
   
+//Lektion 2
+
