@@ -1,3 +1,19 @@
+// NAVIGERING
+
+const navLinks = document.querySelectorAll(".nav-link-custom");
+const pages = document.querySelectorAll(".page");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.forEach((l) => l.classList.remove("active"));
+    pages.forEach((p) => p.classList.remove("active"));
+
+    link.classList.add("active");
+    document.getElementById("page-" + link.getAttribute("data-page")).classList.add("active");
+  });
+});
+
+
 //Lektion 1 
 const labels = [
     'Avesta',
@@ -36,7 +52,6 @@ const labels = [
   
   const myChart = new Chart(canvasElement, config);
   
-//Lektion 2
 
-// komentar 
+
 
