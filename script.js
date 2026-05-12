@@ -51,7 +51,88 @@ const labels = [
   const canvasElement = document.getElementById('myChart');
   
   const myChart = new Chart(canvasElement, config);
-  
 
+
+// VÅR
+
+const urlTransportutsläpp =
+  'https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI0107/MI0107InTranspNN';
+
+const queryTransportutsläpp =
+  {
+    "query": [
+      {
+        "code": "Vaxthusgaser",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "CO2-ekv."
+          ]
+        }
+      },
+      {
+        "code": "Transportslag",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "8.0"
+          ]
+        }
+      },
+      {
+        "code": "Bransleslag",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "0"
+          ]
+        }
+      }
+    ],
+    "response": {
+      "format": "JSON"
+    }
+  }
+
+const requestTransportutsläpp = new Request(urlTransportutsläpp, {
+  method: 'POST',
+  body: JSON.stringify(queryTransportutsläpp)
+});
+
+console.log(requestTransportutsläpp);
+
+fetch(requestTransportutsläpp)
+  .then((response) => response.json())
+  .then((data) => printTransport(data));
+
+function printTransport(dataTransportSCB) {
+  console.log(dataTransportSCB);
+
+  const years = dataTransportSCB.data;
+  console.log(years);
+
+  const labels = years.map((år) => år.key[3]);
+  console.log(labels);
+
+  const data = years.map((type) => type.values[0]);
+  console.log(data);
+
+  const datasets = [
+    {
+      label: 'Mängden utsläpp per år',
+      data,
+      borderWidth: 2,
+      borderColor: 'hsla(250, 100%, 30%, 1)',
+      hoverBorderWidth: 4
+    }
+  ];
+
+  new Chart(document.getElementById('transport'), {
+    type: 'bar',
+    data: { labels, datasets }
+  });
+
+}
+  
 
 
