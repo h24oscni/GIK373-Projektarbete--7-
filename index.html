@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green Route</title>
+    <title>Grupp 7</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
@@ -19,8 +19,8 @@
     <!-- NAV BAR -->
     <nav class="navbar px-4 py-3">
       <a class="navbar-brand-text" href="#" onclick="visaSida('hem')">
-        <img src="logga.png" alt="Logotyp" height="40" />
-      </a>
+        <!--<img src="logga.png" alt="Logotyp" height="40" />
+      </a>-->
 
       <div id="navLinks" class="d-flex gap-3">
         <a href="#" class="nav-link-custom active" data-page="hem">
@@ -73,7 +73,11 @@
     <!-- STATISTIK SIDA-->
     <div id="page-statistik" class="page">
       <canvas id="myChart"></canvas>
-      <canvas id="transport"></canvas>
+      <canvas id="transportLine"></canvas>
+      <canvas id="transportBar"></canvas>
+      <canvas id="transportDonut"></canvas>
+      <canvas id="transportslagChart"></canvas>
+      <canvas id="vagtrafikChart"></canvas>
     </div>
 
     <!-- KARTA SIDA-->
@@ -84,7 +88,7 @@
 
     <!-- FOOTER-->
     <footer>
-      <p>Green Route · GIK373 Projektarbete 2026 · Grupp 7</p>
+      <p>GIK373 Projektarbete 2026 · Grupp 7</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
