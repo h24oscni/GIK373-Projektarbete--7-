@@ -72,13 +72,52 @@
 
     <!-- STATISTIK SIDA-->
     <div id="page-statistik" class="page">
-      <canvas id="myChart"></canvas>
-      <canvas id="transportLine"></canvas>
-      <canvas id="transportBar"></canvas>
-      <canvas id="transportDonut"></canvas>
-      <canvas id="transportslagChart"></canvas>
-      <canvas id="vagtrafikChart"></canvas>
+      <div class="container-fluid py-5 px-4">
+
+        <h2 class="section-title">Rubrik</h2>
+        <div class="section-divider"></div>
+
+        <div class="row g-4 mb-4">
+          <div class="col-12">
+            <div class="diagram-card">
+              <h5>Diagramrubrik</h5>
+              <p class="diagram-text">Beskrivande text om diagrammet</p>
+              <canvas id="transportLine"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+          <div class="col-lg-4">
+            <div class="diagram-card">
+              <h5>Diagramrubrik</h5>
+              <p class="diagram-text">Beskrivande text om diagrammet</p>
+              <canvas id="transportDonut"></canvas>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="diagram-card">
+              <h5>Diagramrubrik</h5>
+              <p class="diagram-text">Beskrivande text om diagrammet</p>
+              <canvas id="transportslagChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+          <div class="col-12">
+            <div class="diagram-card">
+              <h5>Diagramrubrik</h5>
+              <p class="diagram-text">Beskrivande text om diagrammet</p>
+              <canvas id="vagtrafikChart"></canvas>
+            </div>
+          </div>
+        </div>
+      
+      </div>
     </div>
+
 
     <!-- KARTA SIDA-->
     <div id="page-karta" class="page"></div>
