@@ -13,6 +13,15 @@ navLinks.forEach((link) => {
   });
 });
 
+// HAMBURGARE NAVIGERING
+
+const hamburgerButton = document.getElementById('hamburger');
+const navMeny = document.getElementById('navLinks');
+
+hamburgerButton.addEventListener('click', () =>{
+  navMeny.classList.toggle('open');
+})
+
 
 // KAN SVERIGE NÅ TRANSPORTMÅLEN 2030?
 // LINJEDIAGRAM ÖVER TID HUR UTSLÄPPEN SER UT

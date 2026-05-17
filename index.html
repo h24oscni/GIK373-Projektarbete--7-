@@ -22,7 +22,13 @@
         <!--<img src="logga.png" alt="Logotyp" height="40" />
       </a>-->
 
-      <div id="navLinks" class="d-flex gap-3">
+      <!-- HAMBURGERMENY - MOBIL -->
+      <button class ="hamburger" id="hamburger">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- VANLIG NAVBAR - HELSKÄRM-->
+      <div id="navLinks" class="gap-3">
         <a href="#" class="nav-link-custom active" data-page="hem">
           <i class="bi bi-house-fill me-1"></i>Hem
         </a>
@@ -78,35 +84,32 @@
         <div class="section-divider"></div>
 
         <div class="row g-4 mb-4">
-          <div class="col-12">
+          <div class="col-lg-6">
             <div class="diagram-card">
               <h5>Diagramrubrik</h5>
               <p class="diagram-text">Beskrivande text om diagrammet</p>
               <canvas id="transportLine"></canvas>
             </div>
           </div>
-        </div>
 
-        <div class="row g-4 mb-4">
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="diagram-card">
               <h5>Diagramrubrik</h5>
               <p class="diagram-text">Beskrivande text om diagrammet</p>
               <canvas id="transportDonut"></canvas>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-8">
+        <div class="row g-4 mb-4">
+          <div class="col-lg-6">
             <div class="diagram-card">
               <h5>Diagramrubrik</h5>
               <p class="diagram-text">Beskrivande text om diagrammet</p>
               <canvas id="transportslagChart"></canvas>
             </div>
           </div>
-        </div>
-
-        <div class="row g-4 mb-4">
-          <div class="col-12">
+          <div class="col-lg-6">
             <div class="diagram-card">
               <h5>Diagramrubrik</h5>
               <p class="diagram-text">Beskrivande text om diagrammet</p>
@@ -114,7 +117,6 @@
             </div>
           </div>
         </div>
-      
       </div>
     </div>
 

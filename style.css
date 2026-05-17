@@ -69,12 +69,19 @@
     text-transform: uppercase;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: f8f5f0;
+}
+
 footer {
     background-color: #1a3a2a;
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: auto;
 }
 
 .page {
@@ -82,4 +89,60 @@ footer {
 }
 .page.active {
     display: block;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color:#f8f9f7;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .hamburger {
+        display: block;
+    }
+    #navLinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 0.5rem;
+    }
+    #navLinks.open {
+        display: flex;
+    }
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+}
+@media (min-width: 1440px) {
+    .container-fluid {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    .stats-bar{
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .hero p {
+        font-size: 1.3rem;
+    }
+}
+
+.diagram-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
