@@ -19,8 +19,8 @@
     <!-- NAV BAR -->
     <nav class="navbar px-4 py-3">
       <a class="navbar-brand-text" href="#" onclick="visaSida('hem')">
-        <!--<img src="logga.png" alt="Logotyp" height="40" />
-      </a>-->
+        <img src="images/Logo.png" alt="Logotyp" height="60"/>
+      </a>
 
       <!-- HAMBURGERMENY - MOBIL -->
       <button class ="hamburger" id="hamburger">
@@ -47,10 +47,15 @@
     <!-- STARTSIDA/HEMSIDA -->
     <div id="page-hem" class="page active">
       <div class="hero">
-        <h1>Rubrik</h1>
-        <p>Lite text att skriva i vår herosektion</p>
+        <h1>Hur mycket påverkar våra resor klimatet?</h1>
+        <p>Varje dag rör vi oss mellan platser.<br>
+          Till jobbet. Skolan. Vänner. Semesterresor.<br>
+          
+          Men bakom varje resa finns något vi sällan ser:
+          ett klimatavtryck.
+          </p>
       </div>
-
+      
       <!-- STAT BAR -->
       <div class="stats-bar d-flex justify-content-around">
         <div class="stat-item">
@@ -74,6 +79,33 @@
           <div class="stat-label">Rubrik</div>
         </div>
       </div>
+
+      <!-- SEKTION 1-->
+      <div class="container-fluid py-5 px-4">
+        <div class="row g-5 align-items-center mb-5">
+          <div class="col-lg-6">
+            <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-1"/>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="sektion-rubrik">Rubrik</h2>
+            <p class="sektion-text">Beskrivande text här</p>
+            <button class="sektion-button" onclick="visaSida('statistik', document.querySelector('[data-page=statistik]'))">
+            Se statistik</button>
+          </div>
+        </div>
+        <!-- SEKTION 2-->
+        <div class="row g-5 align-items-center mb-5">
+          <div class="col-lg-6 order-lg-2">
+            <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-2"/>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h2 class="sektion-rubrik">Rubrik</h2>
+            <p class="sektion-text">Beskrivande text här</p>
+            <button class="sektion-button" onclick="visaSida('karta', document.querySelector('[data-page=karta]'))">
+            Se kartan</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- STATISTIK SIDA-->
@@ -84,19 +116,31 @@
         <div class="section-divider"></div>
 
         <div class="row g-4 mb-4">
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="diagram-card">
-              <h5>Diagramrubrik</h5>
-              <p class="diagram-text">Beskrivande text om diagrammet</p>
+              <h5>Transportutsläpp per år</h5>
+              <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
               <canvas id="transportLine"></canvas>
+              <p class="diagram-text">Transportsektorns utsläpp förändras varje år beroende på hur vi reser, vilka drivmedel som används och hur samhället utvecklas.<br>
+                Under lång tid har vägtrafiken stått för den största delen av transporternas klimatpåverkan, men även flyg och sjöfart bidrar kraftigt till de totala utsläppen.<br>
+                Samtidigt visar utvecklingen att elektrifiering, kollektivtrafik och effektivare transporter kan minska utsläppen över tid.<br>
+                Diagrammet ger en bild om hur snabbt förändringen behöver gå för att klimatmålen ska kunna nås.
+                </p>
             </div>
           </div>
-
-          <div class="col-lg-6">
+        </div>
+        <div class="row g-4 mb-4">
+          <div class="col-lg-12">
             <div class="diagram-card">
-              <h5>Diagramrubrik</h5>
-              <p class="diagram-text">Beskrivande text om diagrammet</p>
+              <h5>Transport vs övrigt</h5>
+              <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
               <canvas id="transportDonut"></canvas>
+              <p class="diagram-text">En stor del av samhällets växthusgasutsläpp kommer från hur människor och varor förflyttas varje dag.<br>
+                Bilar, lastbilar, flyg och fartyg använder enorma mängder energi, vilket gör transportsektorn till en av de största utsläppskällorna både i Sverige och globalt.<br>
+                Samtidigt kommer utsläpp också från industrier, energiproduktion, jordbruk och bygge.<br>
+                För att förstå transporternas verkliga påverkan behöver man därför jämföra dem med resten av samhällets utsläpp.<br>
+                Diagrammet visar hur stor del av de totala utsläppen som kommer från transporter jämfört med andra sektorer.
+                </p>
             </div>
           </div>
         </div>
@@ -104,16 +148,30 @@
         <div class="row g-4 mb-4">
           <div class="col-lg-6">
             <div class="diagram-card">
-              <h5>Diagramrubrik</h5>
-              <p class="diagram-text">Beskrivande text om diagrammet</p>
+              <h5>Utsläpp per transportslag</h5>
+              <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
               <canvas id="transportslagChart"></canvas>
+              <p class="diagram-text">Alla transportmedel påverkar klimatet, men inte i samma utsträckning. <br>
+                Diagrammet visar hur stora utsläppen från olika transportslag var under 2023.<br>
+                Det blir tydligt att vägtrafiken står för den absolut största delen av transportsektorns klimatpåverkan, medan järnvägen har mycket låga utsläpp i jämförelse.<br>
+                Skillnaderna beror bland annat på:<br>
+                Hur många människor eller varor som transporteras,<br>
+                vilken energi som används,<br>
+                och hur energieffektivt transportmedlet är.<br>
+                Genom att förstå vilka transporter som släpper ut mest blir det också lättare att se var förändringar kan göra störst skillnad för klimatet.
+                </p>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="diagram-card">
-              <h5>Diagramrubrik</h5>
-              <p class="diagram-text">Beskrivande text om diagrammet</p>
+              <h5>Utsläpp från vägtrafik</h5>
+              <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
               <canvas id="vagtrafikChart"></canvas>
+              <p class="diagram-text">Diagrammet visar hur utsläppen från olika typer av vägfordon fördelades under 2023. Personbilar står för den största delen av utsläppen, vilket inte är så konstigt eftersom de används varje dag av miljontals människor.<br>
+                Samtidigt bidrar även lastbilar och andra fordon till en stor del av klimatpåverkan från vägtrafiken.<br>
+                Skillnaderna mellan fordonstyperna beror bland annat på hur många fordon som används,<br>
+                hur långt de kör, vilken typ av bränsle de använder, och hur mycket energi som krävs för att driva dem.
+                </p>
             </div>
           </div>
         </div>
@@ -126,6 +184,11 @@
 
     <!-- OM PROJEKTET SIDA-->
     <div id="page-om" class="page"></div>
+
+    <!-- TILL TOPPEN KNAPP-->
+    <button class="till-toppen" id="tillToppen">
+      <i class="bi bi-arrow-up"></i>
+    </button>
 
     <!-- FOOTER-->
     <footer>

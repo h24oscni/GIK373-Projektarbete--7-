@@ -369,3 +369,18 @@ function createDonut(transport, ovrigt){
     }
   });
 }
+
+
+// TILL TOPPEN KNAPP
+const tillToppenButton = document.getElementById('tillToppen');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    toTopButton.style.display= 'flex';
+  } else {
+    toTopButton.style.display ='none';
+  }
+});
+tillToppenButton.addEventListener('click', () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});

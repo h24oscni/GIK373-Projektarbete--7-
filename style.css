@@ -146,3 +146,59 @@ footer {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     height: 100%;
 }
+
+.till-toppen {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #1a3a2a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    z-index: 999;
+}
+.till-toppen:hover{
+    background-color: #2d6a4f;
+}
+
+.sektion-bild {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 400px;
+}
+.sektion-rubrik {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color:#1a3a2a;
+    margin-bottom: 1rem;
+}
+.sektion-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color:black;
+    margin-bottom: 1.5rem;
+}
+.sektion-knapp {
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.sektion-knapp:hover {
+    background-color: #1a3a2a;
+}
