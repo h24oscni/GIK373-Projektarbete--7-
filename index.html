@@ -81,32 +81,37 @@
       </div>
 
       <!-- SEKTION 1-->
-      <div class="container-fluid py-5 px-4">
-        <div class="row g-5 align-items-center mb-5">
-          <div class="col-lg-6">
-            <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-1"/>
-          </div>
-          <div class="col-lg-6">
-            <h2 class="sektion-rubrik">Rubrik</h2>
-            <p class="sektion-text">Beskrivande text här</p>
-            <button class="sektion-button" onclick="visaSida('statistik', document.querySelector('[data-page=statistik]'))">
-            Se statistik</button>
-          </div>
-        </div>
-        <!-- SEKTION 2-->
-        <div class="row g-5 align-items-center mb-5">
-          <div class="col-lg-6 order-lg-2">
-            <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-2"/>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <h2 class="sektion-rubrik">Rubrik</h2>
-            <p class="sektion-text">Beskrivande text här</p>
-            <button class="sektion-button" onclick="visaSida('karta', document.querySelector('[data-page=karta]'))">
-            Se kartan</button>
+      <div class="px-4 mb-4">
+        <div class="diagram-card">
+          <div class="row g-5 align-items-start">
+            <div class="col-lg-6">
+              <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-1"/>
+            </div>
+            <div class="col-lg-6">
+              <h2 class="sektion-rubrik">Rubrik</h2>
+              <p class="sektion-text">Beskrivande text här</p>
+              <button class="sektion-button" onclick="visaSida('statistik')">Se statistik</button>
+              Se statistik</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+        <!-- SEKTION 2-->
+      <div class="px-4 mb-4">
+        <div class="diagram-card">
+          <div class="row g-5 align-items-start">
+            <div class="col-lg-6 order-lg-2">
+              <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-2"/>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+             <h2 class="sektion-rubrik">Rubrik</h2>
+              <p class="sektion-text">Beskrivande text här</p>
+              <button class="sektion-button" onclick="visaSida('karta')">Se karta</button>
+             Se kartan</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- STATISTIK SIDA-->
     <div id="page-statistik" class="page">
