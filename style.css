@@ -203,3 +203,21 @@ footer {
 .sektion-button:hover {
     background-color: #1a3a2a;
 }
+
+.las-mer-knapp {
+    background: none;
+    border: none;
+    color:#2d6a4f;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: all 0.2s;
+}
+
+.las-mer-knapp:hover {
+    color: #1a3a2a;
+}

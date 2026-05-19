@@ -49,7 +49,8 @@ function printTransport(dataTransportSCB) {
     label: 'Mängden utsläpp per år',
     data,
     borderWidth: 2,
-    borderColor: 'hsla(250, 100%, 30%, 1)',
+    borderColor: '#2d6a4f',
+    backgroundColor: 'rgba(45, 106, 79, 0.1)',
     hoverBorderWidth: 4
   }];
 
@@ -235,4 +236,29 @@ function visaSida(pageId) {
   if (aktivLank) aktivLank.classList.add('active');
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// LÄS MER FUNKTION
+function lasMer(knapp) {
+  const innehall = knapp.nextElementSibling;
+
+  if (innehall.style.display === 'none') {
+      innehall.style.display = 'block';
+      knapp.innerHTML ='<i class="bi bi-chevron-up -me-1"></i>Läs mindre';
+  } else {
+      innehall.style.display = 'none';
+      knapp.innerHTML ='<i class="bi bi-chevron-down me-1"></i>Läs mer';
+  }
+}
+// VISA KÄLLOR
+function visaKallor(knapp) {
+  const innehall = knapp.nextElementSibling;
+
+  if (innehall.style.display === 'none') {
+      innehall.style.display = 'block';
+      knapp.innerHTML ='<i class="bi bi-chevron-up -me-1"></i>Källor & referenser';
+  } else {
+      innehall.style.display = 'none';
+      knapp.innerHTML ='<i class="bi bi-chevron-down me-1"></i>Källor & referenser';
+  }
 }

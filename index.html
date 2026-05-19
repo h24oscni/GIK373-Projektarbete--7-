@@ -124,11 +124,32 @@
               <h5>Transportutsläpp per år</h5>
               <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
               <canvas id="transportLine"></canvas>
-              <p class="diagram-text">Transportsektorns utsläpp förändras varje år beroende på hur vi reser, vilka drivmedel som används och hur samhället utvecklas.<br>
+
+              <!-- LÄS MER-->
+              <button class="las-mer-knapp" onclick="lasMer(this)">
+                <i class="bi bi-chevron-down me-1"></i>Läs mer
+              </button>
+              <div class="las-mer-innehall" style="display:none;">
+                <p class="diagram-text">Transportsektorns utsläpp förändras varje år beroende på hur vi reser, vilka drivmedel som används och hur samhället utvecklas.<br>
                 Under lång tid har vägtrafiken stått för den största delen av transporternas klimatpåverkan, men även flyg och sjöfart bidrar kraftigt till de totala utsläppen.<br>
                 Samtidigt visar utvecklingen att elektrifiering, kollektivtrafik och effektivare transporter kan minska utsläppen över tid.<br>
                 Diagrammet ger en bild om hur snabbt förändringen behöver gå för att klimatmålen ska kunna nås.
                 </p>
+              </div>
+              <!-- REFERENSER -->
+              <button class="las-mer-knapp" onclick="visaKallor(this)">
+                <i class="bi bi-chevron-down me-1"></i>Källor & referenser
+              </button>
+              <div class="las-mer-innehall" style="display:none;">
+                <p class="diagram-text">
+                  <strong>Datakälla:</strong><br>
+                  <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" target="_blank">SCB - Utsläpp från inrikes transporter</a>
+                </p>
+                <p class="diagram-text">
+                  <strong>Referens:</strong><br>
+                  Efternamn, F. (år). Artikelnamn. <em>Tidskrift</em>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -138,12 +159,34 @@
               <h5>Transport vs övrigt</h5>
               <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
               <canvas id="transportDonut"></canvas>
-              <p class="diagram-text">En stor del av samhällets växthusgasutsläpp kommer från hur människor och varor förflyttas varje dag.<br>
-                Bilar, lastbilar, flyg och fartyg använder enorma mängder energi, vilket gör transportsektorn till en av de största utsläppskällorna både i Sverige och globalt.<br>
-                Samtidigt kommer utsläpp också från industrier, energiproduktion, jordbruk och bygge.<br>
-                För att förstå transporternas verkliga påverkan behöver man därför jämföra dem med resten av samhällets utsläpp.<br>
-                Diagrammet visar hur stor del av de totala utsläppen som kommer från transporter jämfört med andra sektorer.
+
+              <!-- LÄS MER-->
+              <button class="las-mer-knapp" onclick="lasMer(this)">
+                <i class="bi bi-chevron-down me-1"></i>Läs mer
+              </button>
+              <div class="las-mer-innehall" style="display:none;">
+                <p class="diagram-text">En stor del av samhällets växthusgasutsläpp kommer från hur människor och varor förflyttas varje dag.<br>
+                  Bilar, lastbilar, flyg och fartyg använder enorma mängder energi, vilket gör transportsektorn till en av de största utsläppskällorna både i Sverige och globalt.<br>
+                  Samtidigt kommer utsläpp också från industrier, energiproduktion, jordbruk och bygge.<br>
+                  För att förstå transporternas verkliga påverkan behöver man därför jämföra dem med resten av samhällets utsläpp.<br>
+                  Diagrammet visar hur stor del av de totala utsläppen som kommer från transporter jämfört med andra sektorer.
                 </p>
+              </div>
+              <!-- REFERENSER -->
+              <button class="las-mer-knapp" onclick="visaKallor(this)">
+                <i class="bi bi-chevron-down me-1"></i>Källor & referenser
+              </button>
+              <div class="las-mer-innehall" style="display:none;">
+                <p class="diagram-kalla">
+                  <strong>Datakälla:</strong><br> 
+                  <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" target="_blank">SCB - Utsläpp från inrikes transporter</a><br>
+                  <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/TotaltUtslappN/" target="_blank">SCB - Totala utsläpp</a>
+                </p>
+                <p class="diagram-text">
+                  <strong>Referens:</strong><br>
+                  Efternamn, F. (år). Artikelnamn. <em>Tidskrift</em>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -154,7 +197,13 @@
               <h5>Utsläpp per transportslag</h5>
               <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
               <canvas id="transportslagChart"></canvas>
-              <p class="diagram-text">Alla transportmedel påverkar klimatet, men inte i samma utsträckning. <br>
+
+              <!-- LÄS MER-->
+              <button class="las-mer-knapp" onclick="lasMer(this)">
+                <i class="bi bi-chevron-down me-1"></i>Läs mer
+              </button>
+              <div class="las-mer-innehall" style="display:none;">
+                <p class="diagram-text">Alla transportmedel påverkar klimatet, men inte i samma utsträckning. <br>
                 Diagrammet visar hur stora utsläppen från olika transportslag var under 2023.<br>
                 Det blir tydligt att vägtrafiken står för den absolut största delen av transportsektorns klimatpåverkan, medan järnvägen har mycket låga utsläpp i jämförelse.<br>
                 Skillnaderna beror bland annat på:<br>
@@ -163,6 +212,23 @@
                 och hur energieffektivt transportmedlet är.<br>
                 Genom att förstå vilka transporter som släpper ut mest blir det också lättare att se var förändringar kan göra störst skillnad för klimatet.
                 </p>
+              </div>
+              <!-- REFERENSER -->
+              <button class="las-mer-knapp" onclick="visaKallor(this)">
+                <i class="bi bi-chevron-down me-1"></i>Källor & referenser
+              </button>
+              <div class="las-mer-innehall" style="display:none;">
+                <p class="diagram-kalla">
+                  <strong>Datakälla:</strong><br>
+                  <div class="kalla-länkar">
+                      <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" target="_blank">SCB - Utsläpp från inrikes transporter</a>
+                  </div>
+                </p>
+                <p class="diagram-text">
+                  <strong>Referens:</strong><br>
+                  Efternamn, F. (år). Artikelnamn. <em>Tidskrift</em>.
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-lg-6">
@@ -170,11 +236,35 @@
               <h5>Utsläpp från vägtrafik</h5>
               <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
               <canvas id="vagtrafikChart"></canvas>
-              <p class="diagram-text">Diagrammet visar hur utsläppen från olika typer av vägfordon fördelades under 2023. Personbilar står för den största delen av utsläppen, vilket inte är så konstigt eftersom de används varje dag av miljontals människor.<br>
-                Samtidigt bidrar även lastbilar och andra fordon till en stor del av klimatpåverkan från vägtrafiken.<br>
-                Skillnaderna mellan fordonstyperna beror bland annat på hur många fordon som används,<br>
-                hur långt de kör, vilken typ av bränsle de använder, och hur mycket energi som krävs för att driva dem.
+
+              <!-- LÄS MER-->
+              <button class="las-mer-knapp" onclick="lasMer(this)">
+                <i class="bi bi-chevron-down me-1"></i>Läs mer
+              </button>
+              <div class="las-mer-innehall" style="display:none;">
+                <p class="diagram-text">Diagrammet visar hur utsläppen från olika typer av vägfordon fördelades under 2023. Personbilar står för den största delen av utsläppen, vilket inte är så konstigt eftersom de används varje dag av miljontals människor.<br>
+                  Samtidigt bidrar även lastbilar och andra fordon till en stor del av klimatpåverkan från vägtrafiken.<br>
+                  Skillnaderna mellan fordonstyperna beror bland annat på hur många fordon som används,<br>
+                  hur långt de kör, vilken typ av bränsle de använder, och hur mycket energi som krävs för att driva dem.
                 </p>
+              </div>
+
+              <!-- REFERENSER -->
+              <button class="las-mer-knapp" onclick="visaKallor(this)">
+                <i class="bi bi-chevron-down me-1"></i>Källor & referenser
+              </button>
+              <div class="las-mer-innehall" style="display:none;">
+                <p class="diagram-kalla">
+                  <strong>Datakälla:</strong><br>
+                  <div class="kalla-länkar">
+                      <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" target="_blank">SCB - Utsläpp från inrikes transporter</a>
+                  </div>
+                </p>
+                <p class="diagram-text">
+                  <strong>Referens:</strong><br>
+                  Efternamn, F. (år). Artikelnamn. <em>Tidskrift</em>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
