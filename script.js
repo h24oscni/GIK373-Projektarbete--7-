@@ -46,7 +46,7 @@ function printTransport(dataTransportSCB) {
   const data = years.map((type) => type.values[0]);
 
   const datasets = [{
-    label: 'Mängden utsläpp per år',
+    label: 'Mängden utsläpp per år (kt C02-ekv.)',
     data,
     borderWidth: 2,
     borderColor: '#2d6a4f',
@@ -56,7 +56,27 @@ function printTransport(dataTransportSCB) {
 
   new Chart(document.getElementById('transportLine'), {
     type: 'line',
-    data: { labels, datasets }
+    data: { labels, datasets },
+    options: {
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'År',
+            color: '#1a3a2a',
+            font: {weight: 'bold'}
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: 'kt c02-ekv.',
+            color: '"1a3a2a',
+            font: {weight: 'bold'}
+          }
+        }
+      }
+    }
   });
 }
 
