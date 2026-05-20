@@ -17,18 +17,18 @@
   </head>
   <body>
 
-    <!-- NAV BAR -->
+<!-- NAV BAR -->
     <nav class="navbar px-4 py-3">
       <a class="navbar-brand-text" href="#" onclick="visaSida('hem')">
         <img src="images/Logo.png" alt="Logotyp" height="60"/>
       </a>
 
-      <!-- HAMBURGERMENY - MOBIL -->
+<!-- HAMBURGERMENY - MOBIL -->
       <button class ="hamburger" id="hamburger">
         <i class="bi bi-list"></i>
       </button>
 
-      <!-- VANLIG NAVBAR - HELSKÄRM-->
+<!-- VANLIG NAVBAR - HELSKÄRM-->
       <div id="navLinks" class="gap-3">
         <a href="#" class="nav-link-custom active" data-page="hem">
           <i class="bi bi-house-fill me-1"></i>Hem
@@ -45,7 +45,7 @@
       </div>
     </nav>
 
-    <!-- STARTSIDA/HEMSIDA -->
+<!-- STARTSIDA/HEMSIDA -->
     <div id="page-hem" class="page active">
       <div class="hero">
         <h1>Hur mycket påverkar våra resor klimatet?</h1>
@@ -57,31 +57,49 @@
           </p>
       </div>
       
-      <!-- STAT BAR -->
+<!-- STAT BAR -->
       <div class="stats-bar d-flex justify-content-around">
         <div class="stat-item">
           <i class="bi bi-wind"></i>
-          <div class="stat-number">-</div>
-          <div class="stat-label">Utsläpp 2025</div>
+          <div class="stat-number">16 848 kt CO₂</div>
+          <div class="stat-label">Transportutsläpp<br> i Sverige 2024</div>
         </div>
         <div class="stat-item">
-          <i class="bi bi-thermometer-half"></i>
-          <div class="stat-number">-</div>
-          <div class="stat-label">Förändring sedan 2015</div>
+          <i class="bi bi-graph-down-arrow"></i>
+          <div class="stat-number">-23%</div>
+          <div class="stat-label">Minskning av<br> transportutsläpp sedan 2007</div>
         </div>
         <div class="stat-item">
-          <i class="bi bi-building"></i>
-          <div class="stat-number">-</div>
-          <div class="stat-label">Rubrik</div>
-        </div>
-        <div class="stat-item">
-          <i class="bi bi-globe"></i>
-          <div class="stat-number">-</div>
-          <div class="stat-label">Rubrik</div>
+          <i class="bi bi-car-front"></i>
+          <div class="stat-number">35%</div>
+          <div class="stat-label">Av Sveriges totala<br> utsläpp kommer från transporter</div>
         </div>
       </div>
 
-      <!-- SEKTION 1-->
+<!-- TRENDEN -->
+<div class="px-4 mt-4 mb-4">
+  <div class="diagram-card">
+      <div class="row g-4 align-items-stretch">
+          
+<!--TEXT TILL DIAGRAMMET-->
+      <div class="col-lg-4 d-flex flex-column justify-content-center">
+        <h5 class="mt-2">Utsläppen minskar, men räcker det för att nå målen 2030?</h5>
+        <p class="diagram-text">Sveriges transportutsläpp har minskat med <strong>23%</strong> sedan toppåret 2007. Men för att nå klimatmålet till 2030 behöver takten öka kraftigt.</p>
+      </div>
+<!-- DIAGRAMMET-->
+          <div class="col-lg-8">
+            <p class="diagram-underrubrik text-center">Totala transportutsläppen i Sverige</p>
+            <div class="diagram-legend">
+              <span class="legend-item"><span class="legend-dot-green"></span>Faktiska utsläpp</span>
+              <span class="legend-item"><span class="legend-dot-red"></span>Klimatmål 2030</span>
+            </div>
+            <canvas id="transportLineHem" height="120"></canvas>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- SEKTION 1-->
       <div class="px-4 mb-4">
         <div class="diagram-card">
           <div class="row g-5 align-items-start">
@@ -97,7 +115,7 @@
         </div>
       </div>
       
-        <!-- SEKTION 2-->
+<!-- SEKTION 2-->
       <div class="px-4 mb-4">
         <div class="diagram-card">
           <div class="row g-5 align-items-start">
@@ -114,7 +132,7 @@
       </div>
     </div>
 
-    <!-- STATISTIK SIDA-->
+<!-- STATISTIK SIDA-->
     <div id="page-statistik" class="page">
       <div class="container-fluid py-5 px-4">
 
@@ -280,18 +298,18 @@
     </div>
 
 
-    <!-- KARTA SIDA-->
+<!-- KARTA SIDA-->
     <div id="page-karta" class="page"></div>
 
-    <!-- OM PROJEKTET SIDA-->
+<!-- OM PROJEKTET SIDA-->
     <div id="page-om" class="page"></div>
 
-    <!-- TILL TOPPEN KNAPP-->
+<!-- TILL TOPPEN KNAPP-->
     <button class="till-toppen" id="tillToppen">
       <i class="bi bi-arrow-up"></i>
     </button>
 
-    <!-- FOOTER-->
+<!-- FOOTER-->
     <footer>
       <p>GIK373 Projektarbete 2026 · Grupp 7</p>
     </footer>

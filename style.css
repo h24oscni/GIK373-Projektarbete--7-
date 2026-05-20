@@ -222,3 +222,32 @@ footer {
 .las-mer-knapp:hover {
     color: #1a3a2a;
 }
+
+.diagram-legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.legend-dot-green {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: #2d6a4f;
+}
+
+.legend-dot-red {
+    width: 10px;
+    height: 3px;
+    background: #e63946;
+    display: inline-block;
+}

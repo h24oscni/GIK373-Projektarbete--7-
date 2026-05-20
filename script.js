@@ -38,7 +38,10 @@ fetch(urlTransportutsläpp, {
   method: 'POST',
   body: JSON.stringify(queryTransportutsläpp)
 }).then((res) => res.json())
-  .then((data) => printTransport(data));
+  .then((data) => {
+    printTransport(data);
+    printTransportHem(data);
+  });
 
 function printTransport(dataTransportSCB) {
   const years = dataTransportSCB.data;
@@ -79,6 +82,69 @@ function printTransport(dataTransportSCB) {
     }
   });
 }
+
+function printTransportHem(dataTransportSCB) {
+  const allData = dataTransportSCB.data;
+  
+  const fran2007 = allData.filter((row) => parseInt(row.key[3]) >= 2007);
+  
+  const labels = fran2007.map((row) => row.key[3]);
+  labels.push('2025', '2026', '2027', '2028', '2029', '2030');
+
+  const data = fran2007.map((row) => parseFloat(row.values[0]));
+  const senasteVarde = data[data.length - 1];
+
+  const faktiskData = [...data, ...Array(6).fill(null)];
+
+  const mal2030 = 6300;
+  const steg = (senasteVarde - mal2030) / 6;
+  const malData = [
+      ...Array(data.length - 1).fill(null), 
+      senasteVarde,
+      Math.round(senasteVarde - steg),
+      Math.round(senasteVarde - steg * 2),
+      Math.round(senasteVarde - steg * 3),
+      Math.round(senasteVarde - steg * 4),
+      Math.round(senasteVarde - steg * 5),
+      mal2030
+  ];
+
+  new Chart(document.getElementById('transportLineHem'), {
+      type: 'line',
+      data: {
+          labels: labels,
+          datasets: [
+              {
+                  label: 'Faktiska utsläpp (kt CO₂)',
+                  data: faktiskData,
+                  borderColor: '#2d6a4f',
+                  backgroundColor: 'rgba(45, 106, 79, 0.12)',
+                  fill: true,
+                  tension: 0.4,
+                  pointRadius: 2,
+                  borderWidth: 2.5
+              },
+              {
+                  label: 'Klimatmål 2030',
+                  data: malData,
+                  borderColor: '#e63946',
+                  borderDash: [6, 4],
+                  borderWidth: 2,
+                  pointRadius: 0,
+                  fill: false
+              }
+          ]
+      },
+      options: {
+          scales: {
+              x: { title: { display: true, text: 'År', color: '#1a3a2a', font: { weight: 'bold' } } },
+              y: { title: { display: true, text: 'kt CO₂-ekv.', color: '#1a3a2a', font: { weight: 'bold' } }, min: 4000 }
+          },
+          plugins: { legend: { display: false } }
+      }
+  });
+}
+
 
 
 // VILKET TRANSPORTSLAG SLÄPPER UT MEST?
