@@ -121,6 +121,7 @@
         <h2 class="section-title">Rubrik</h2>
         <div class="section-divider"></div>
 
+<!-- LINJE DIAGRAM, TOTALA TRANSPORTUTSLÄPP-->
         <div class="row g-4 mb-4">
           <div class="col-lg-12">
             <div class="diagram-card">
@@ -156,12 +157,15 @@
             </div>
           </div>
         </div>
+<!-- TRANSPORT VS ÖVRIGA UTSLÄPP, DONUT-->
         <div class="row g-4 mb-4">
           <div class="col-lg-12">
             <div class="diagram-card">
-              <h5>Transport vs övrigt</h5>
-              <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
-              <canvas id="transportDonut"></canvas>
+              <h5>Transporter står för ca 35% av Sveriges klimatutsläpp</h5>
+              <p class="diagram-underrubrik">Jämförelse mellan transportsektorn och övriga utsläppskällor år 2023</p>
+              <div style="height: 400px; max-width: 600px; margin: 0 auto;">
+                <canvas id="transportDonut"></canvas>
+              </div>
 
               <!-- LÄS MER-->
               <button class="las-mer-knapp" onclick="lasMer(this)">
@@ -193,12 +197,12 @@
             </div>
           </div>
         </div>
-
+<!-- TRANSPORTUTSLÄPP PER TRANSPORTSLAG-->
         <div class="row g-4 mb-4">
           <div class="col-lg-6">
             <div class="diagram-card">
-              <h5>Utsläpp per transportslag</h5>
-              <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
+              <h5>Vägtrafiken dominerar Sveriges transportutsläpp</h5>
+              <p class="diagram-underrubrik">Jämförelse av utsläpp mellan olika transportslag år 2023</p>
               <canvas id="transportslagChart"></canvas>
 
               <!-- LÄS MER-->
@@ -234,10 +238,11 @@
               </div>
             </div>
           </div>
+<!-- VÄGTRAFIK UTSLÄPP-->
           <div class="col-lg-6">
             <div class="diagram-card">
-              <h5>Utsläpp från vägtrafik</h5>
-              <p class="diagram-underrubrik">Beskrivande text om diagrammet</p>
+              <h5>Personbilar är vägtrafikens största klimatbov</h5>
+              <p class="diagram-underrubrik">Fördelning av utsläpp per fordonstyp inom vägtrafiken år 2023</p>
               <canvas id="vagtrafikChart"></canvas>
 
               <!-- LÄS MER-->

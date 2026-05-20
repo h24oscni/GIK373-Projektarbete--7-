@@ -124,6 +124,26 @@ function printTransportslag(data) {
         backgroundColor: ['#52b788', '#2d6a4f', '#95d5b2', '#1a3a2a'],
         borderWidth: 2
       }]
+    },
+    options: {
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Transportslag',
+            color: '#1a3a2a',
+            font: {weight: 'bold'}
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: 'kt C02-ekv.',
+            color: '#1a3a2a',
+            font: {weight: 'bold'}
+          }
+        }
+      }
     }
   });
 }
@@ -173,6 +193,26 @@ function printVagtrafik(data) {
         backgroundColor: ['#52b788', '#2d6a4f', '#95d5b2', '#1a3a2a'],
         borderWidth: 2
       }]
+    },
+    options: {
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Transportslag',
+            color: '#1a3a2a',
+            font: {weight: 'bold'}
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: 'kt C02-ekv.',
+            color: '#1a3a2a',
+            font: {weight: 'bold'}
+          }
+        }
+      }
     }
   });
 }
@@ -223,6 +263,10 @@ function createDonut(transport, ovrigt) {
         backgroundColor: ['#2d6a4f', '#d8f3dc'],
         borderWidth: 2
       }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
     }
   });
 }
