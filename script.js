@@ -392,3 +392,18 @@ function visaKallor(knapp) {
       knapp.innerHTML ='<i class="bi bi-chevron-down me-1"></i>Källor & referenser';
   }
 }
+
+// HOVER KORTEN UNDER HERO
+const faktaKort = document.querySelectorAll('.fakta-kort');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('synlig');
+            }, index * 150);
+        }
+    });
+}, { threshold: 0.1 });
+
+faktaKort.forEach((kort) => observer.observe(kort));
