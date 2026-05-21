@@ -7,7 +7,7 @@
 }
 
 .nav-link-custom {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -74,7 +74,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: f8f5f0;
+    background-color: #f8f5f0;
 }
 
 footer {
@@ -187,7 +187,7 @@ footer {
 .sektion-text {
     font-size: 1rem;
     line-height: 1.8;
-    color:black;
+    color:#1a3a2a;
     margin-bottom: 1.5rem;
 }
 .sektion-button {
@@ -250,4 +250,39 @@ footer {
     height: 3px;
     background: #e63946;
     display: inline-block;
+}
+
+.globalt-mal-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: #f8f5f0;
+    border-radius: 8px;
+    padding: 1.2rem;
+    height: 100%;
+}
+
+.globalt-mal-ikon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.globalt-mal-rubrik {
+    font-weight: 700;
+    color: #1a3a2a;
+    margin-bottom: 0.3rem;
+}
+
+.globalt-mal-text {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
 }
