@@ -394,7 +394,7 @@ function visaKallor(knapp) {
 }
 
 // HOVER KORTEN UNDER HERO
-const faktaKort = document.querySelectorAll('.fakta-kort');
+const faktaKort = document.querySelectorAll('.info-kort');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
