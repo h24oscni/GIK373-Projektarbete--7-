@@ -1,3 +1,35 @@
+/* GLOBALT */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f5f0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1a3a2a;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+p {
+    font-size: 0.95rem;
+    color: #1a3a2a;
+    line-height: 1.7;
+}
+
+/* DIAGRAM */
+.diagram-underrubrik {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+/* NAVBAR */
+
 .navbar {
     background-color: #1a3a2a;
     position: sticky;
@@ -23,6 +55,20 @@
     border-radius: 8px;
 }
 
+.hamburger {
+    display: none;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #f8f9f7;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
 .hero {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -39,13 +85,13 @@
     padding-bottom: 100px;
 }
 
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #f8f5f0;
+.hero h1,
+.hero p {
+    color: #f8f9f7;
 }
+
+
+/* FOOTER */
 
 footer {
     background-color: #1a3a2a;
@@ -55,60 +101,19 @@ footer {
     margin-top: auto;
 }
 
+
+/* SIDOR */
+
 .page {
     display: none;
 }
+
 .page.active {
     display: block;
 }
 
-.hamburger {
-    display: none;
-    background: none;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color:#f8f9f7;
-    font-size: 1.5rem;
-    border-radius: 8px;
-    padding: 0.2rem 0.6rem;
-    cursor: pointer;
-}
 
-@media (max-width: 600px) {
-
-    .hamburger {
-        display: block;
-    }
-    #navLinks {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding-top: 0.5rem;
-    }
-    #navLinks.open {
-        display: flex;
-    }
-    .navbar {
-        flex-wrap: wrap;
-    }
-
-}
-@media (min-width: 1440px) {
-    .container-fluid {
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-    .stats-bar{
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-    .hero p {
-        font-size: 1.3rem;
-    }
-}
+/* DIAGRAM-KORT */
 
 .diagram-card {
     background: white;
@@ -118,67 +123,10 @@ footer {
     height: 100%;
 }
 
-.till-toppen {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: #1a3a2a;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s;
-    z-index: 999;
-}
-.till-toppen:hover{
-    background-color: #2d6a4f;
-}
-
-.sektion-bild-1,
-.sektion-bild-2 {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-    height: 400px;
-}
-.sektion-rubrik {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color:#1a3a2a;
-    margin-bottom: 1rem;
-}
-.sektion-text {
-    font-size: 1rem;
-    line-height: 1.8;
-    color:#1a3a2a;
-    margin-bottom: 1.5rem;
-}
-.sektion-button {
-    background-color: #2d6a4f;
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.sektion-button:hover {
-    background-color: #1a3a2a;
-}
-
 .las-mer-knapp {
     background: none;
     border: none;
-    color:#2d6a4f;
+    color: #2d6a4f;
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
@@ -193,34 +141,8 @@ footer {
     color: #1a3a2a;
 }
 
-.diagram-legend {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 8px;
-    font-size: 12px;
-    color: #6b7280;
-}
 
-.legend-item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.legend-dot-green {
-    width: 10px;
-    height: 10px;
-    border-radius: 2px;
-    background: #2d6a4f;
-}
-
-.legend-dot-red {
-    width: 10px;
-    height: 3px;
-    background: #e63946;
-    display: inline-block;
-}
+/* GLOBALA MÅLEN */
 
 .globalt-mal-card {
     display: flex;
@@ -245,16 +167,18 @@ footer {
     flex-shrink: 0;
 }
 
-.globalt-mal-rubrik {
-    font-weight: 700;
-    color: #1a3a2a;
-    margin-bottom: 0.3rem;
+
+/* INFO-KORT */
+
+.info-kort {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.globalt-mal-text {
-    font-size: 0.85rem;
-    color: #6b7280;
-    margin-bottom: 0.5rem;
+.info-kort.synlig {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .info-wrap {
@@ -310,7 +234,7 @@ footer {
 
 .info-text {
     font-size: 0.88rem;
-    color: White;
+    color: white;
     margin: 0;
     line-height: 1.6;
 }
@@ -323,14 +247,118 @@ footer {
     opacity: 1;
 }
 
-.info-kort {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+
+/* SEKTIONER */
+
+.sektion-bild-1,
+.sektion-bild-2 {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 400px;
 }
 
-.info-kort.synlig {
-    opacity: 1;
-    transform: translateY(0);
+.sektion-button {
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
+.sektion-button:hover {
+    background-color: #1a3a2a;
+}
+
+
+/* TILL TOPPEN */
+
+.till-toppen {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #1a3a2a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    z-index: 999;
+}
+
+.till-toppen:hover {
+    background-color: #2d6a4f;
+}
+
+
+/* OM PROJEKTET */
+
+.om-person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.om-avatar-ikon {
+    font-size: 2.5rem;
+    color: #2d6a4f;
+}
+
+.om-kalla {
+    padding: 0.6rem 0.8rem;
+    background: #f8f5f0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #2d6a4f;
+    text-decoration: none;
+}
+
+.om-kalla:hover {
+    background: #2d6a4f;
+    color: white;
+}
+
+
+/* RESPONSIVT */
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+    #navLinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 0.5rem;
+    }
+    #navLinks.open {
+        display: flex;
+    }
+    .navbar {
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container-fluid {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .hero p {
+        font-size: 1.3rem;
+    }
+}

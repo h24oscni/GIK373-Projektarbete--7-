@@ -39,57 +39,17 @@ fetch(urlTransportutsläpp, {
   body: JSON.stringify(queryTransportutsläpp)
 }).then((res) => res.json())
   .then((data) => {
-    printTransport(data);
-    printTransportHem(data);
+    printTransport(data, 'transportLine');
+    printTransport(data, 'transportLineHem');
   });
 
-function printTransport(dataTransportSCB) {
-  const years = dataTransportSCB.data;
-  const labels = years.map((år) => år.key[3]);
-  const data = years.map((type) => type.values[0]);
-
-  const datasets = [{
-    label: 'Mängden utsläpp per år (kt C02-ekv.)',
-    data,
-    borderWidth: 2,
-    borderColor: '#2d6a4f',
-    backgroundColor: 'rgba(45, 106, 79, 0.1)',
-    hoverBorderWidth: 4
-  }];
-
-  new Chart(document.getElementById('transportLine'), {
-    type: 'line',
-    data: { labels, datasets },
-    options: {
-      scales: {
-        x: {
-          title: {
-            display: true,
-            text: 'År',
-            color: '#1a3a2a',
-            font: {weight: 'bold'}
-          }
-        },
-        y: {
-          title: {
-            display: true,
-            text: 'kt c02-ekv.',
-            color: '"1a3a2a',
-            font: {weight: 'bold'}
-          }
-        }
-      }
-    }
-  });
-}
-
-function printTransportHem(dataTransportSCB) {
+function printTransport(dataTransportSCB, id) {
   const allData = dataTransportSCB.data;
   
   const fran2007 = allData.filter((row) => parseInt(row.key[3]) >= 2007);
   
   const labels = fran2007.map((row) => row.key[3]);
-  labels.push('2025', '2026', '2027', '2028', '2029', '2030');
+  labels.push('2025', '2026', '2027', '2028', '2029', '2030', '2031');
 
   const data = fran2007.map((row) => parseFloat(row.values[0]));
   const senasteVarde = data[data.length - 1];
@@ -109,7 +69,7 @@ function printTransportHem(dataTransportSCB) {
       mal2030
   ];
 
-  new Chart(document.getElementById('transportLineHem'), {
+  new Chart(document.getElementById(id), {
       type: 'line',
       data: {
           labels: labels,
@@ -140,10 +100,11 @@ function printTransportHem(dataTransportSCB) {
               x: { title: { display: true, text: 'År', color: '#1a3a2a', font: { weight: 'bold' } } },
               y: { title: { display: true, text: 'kt CO₂-ekv.', color: '#1a3a2a', font: { weight: 'bold' } }, min: 4000 }
           },
-          plugins: { legend: { display: false } }
+          plugins: { legend: { display: true } }
       }
   });
 }
+
 
 
 

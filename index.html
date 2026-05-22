@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grupp 7</title>
+    <title>Transportutsläpp</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
@@ -128,15 +128,11 @@
 <!--TEXT TILL DIAGRAMMET-->
       <div class="col-lg-4 d-flex flex-column justify-content-center">
         <h5 class="mt-2">Utsläppen minskar, men räcker det för att nå målen 2030?</h5>
-        <p class="diagram-text">Sveriges transportutsläpp har minskat med <strong>23%</strong> sedan toppåret 2007. Men för att nå klimatmålet till 2030 behöver takten öka kraftigt.</p>
+        <p>Sveriges transportutsläpp har minskat med <strong>23%</strong> sedan toppåret 2007. Men för att nå klimatmålet till 2030 behöver takten öka kraftigt.</p>
       </div>
 <!-- DIAGRAMMET-->
           <div class="col-lg-8">
             <p class="diagram-underrubrik text-center">Totala transportutsläppen i Sverige</p>
-            <div class="diagram-legend">
-              <span class="legend-item"><span class="legend-dot-green"></span>Faktiska utsläpp</span>
-              <span class="legend-item"><span class="legend-dot-red"></span>Klimatmål 2030</span>
-            </div>
             <canvas id="transportLineHem" height="120"></canvas>
           </div>
       </div>
@@ -156,13 +152,13 @@
               <div class="globalt-mal-card">
                   <div class="globalt-mal-ikon" style="background:#387540;">13</div>
                   <div>
-                      <h6 class="globalt-mal-rubrik">Klimatåtgärder</h6>
+                      <h6>Klimatåtgärder</h6>
                       <p class="globalt-mal-text">Små val som kan göra stor skillnad för klimatet</p>
                       <button class="las-mer-knapp" onclick="lasMer(this)">
                           <i class="bi bi-chevron-down me-1"></i>Läs mer
                       </button>
                       <div class="las-mer-innehall" style="display:none;">
-                          <p class="diagram-text">Varje gång vi kör bil, flyger eller tar båten bidrar vi till växthusgasutsläpp som värmer upp vår planet. I Sverige kommer ca 35% av alla utsläpp från transportsektorn. FN:s globala mål 13 handlar om att vidta omedelbara åtgärder mot klimatförändringarna. En av de viktigaste åtgärderna är att ställa om hur vi reser.<br><br>Sverige har som mål att minska transportutsläppen med 70% till 2030 jämfört med 2010. Men utvecklingen går långsamt. Utsläppen måste minska mycket snabbare för att målen ska nås.<br><br>Det börjar med vardagliga val. Att samåka, välja kollektivtrafik eller cykla är enkla sätt att göra skillnad. Varje resa räknas.
+                          <p>Varje gång vi kör bil, flyger eller tar båten bidrar vi till växthusgasutsläpp som värmer upp vår planet. I Sverige kommer ca 35% av alla utsläpp från transportsektorn. FN:s globala mål 13 handlar om att vidta omedelbara åtgärder mot klimatförändringarna. En av de viktigaste åtgärderna är att ställa om hur vi reser.<br><br>Sverige har som mål att minska transportutsläppen med 70% till 2030 jämfört med 2010. Men utvecklingen går långsamt. Utsläppen måste minska mycket snabbare för att målen ska nås.<br><br>Det börjar med vardagliga val. Att samåka, välja kollektivtrafik eller cykla är enkla sätt att göra skillnad. Varje resa räknas.
                           </p>
                       </div>
                   </div>
@@ -174,13 +170,13 @@
               <div class="globalt-mal-card">
                   <div class="globalt-mal-ikon" style="background:#fc8f3a;">11</div>
                   <div>
-                      <h6 class="globalt-mal-rubrik">Hållbara städer</h6>
+                      <h6>Hållbara städer</h6>
                       <p class="globalt-mal-text">Din resa påverkar staden du bor i</p>
                       <button class="las-mer-knapp" onclick="lasMer(this)">
                           <i class="bi bi-chevron-down me-1"></i>Läs mer
                       </button>
                       <div class="las-mer-innehall" style="display:none;">
-                          <p class="diagram-text">Visste du att hur en stad är byggd påverkar hur mycket folk kör bil?<br>I städer med bra kollektivtrafik och cykelvägar reser folk mer hållbart. Inte för att de måste, utan för att det är enklast.<br><br>Det handlar om hur nära vi bor jobbet, skolan och affären. Om det finns bussar som faktiskt går när vi behöver dom och om det känns tryggt att cykla där vi bor.<br><br>Hållbara städer byggs inte av en person. De växer fram när fler väljer att resa smartare och när vi tillsammans skapar efterfrågan på bättre alternativ.</p>
+                          <p>Visste du att hur en stad är byggd påverkar hur mycket folk kör bil?<br>I städer med bra kollektivtrafik och cykelvägar reser folk mer hållbart. Inte för att de måste, utan för att det är enklast.<br><br>Det handlar om hur nära vi bor jobbet, skolan och affären. Om det finns bussar som faktiskt går när vi behöver dom och om det känns tryggt att cykla där vi bor.<br><br>Hållbara städer byggs inte av en person. De växer fram när fler väljer att resa smartare och när vi tillsammans skapar efterfrågan på bättre alternativ.</p>
                       </div>
                   </div>
               </div>
@@ -191,13 +187,13 @@
               <div class="globalt-mal-card">
                   <div class="globalt-mal-ikon" style="background:#fbba3a;">7</div>
                   <div>
-                      <h6 class="globalt-mal-rubrik">Hållbar energi</h6>
+                      <h6>Hållbar energi</h6>
                       <p class="globalt-mal-text">Ladda bilen med grön el</p>
                       <button class="las-mer-knapp" onclick="lasMer(this)">
                           <i class="bi bi-chevron-down me-1"></i>Läs mer
                       </button>
                       <div class="las-mer-innehall" style="display:none;">
-                          <p class="diagram-text">FN:s mål 7 handlar om att alla ska ha tillgång till hållbar och förnybar energi. Det är direkt kopplat till hur vi väljer att resa. Ju mer vi elektrifierar transporter och laddar med grön el, desto närmare kommer vi målet.<br><br>Varje gång du väljer elbuss,eltåg eller elbil bidrar du till en renare energiframtid.</p>
+                          <p>FN:s mål 7 handlar om att alla ska ha tillgång till hållbar och förnybar energi. Det är direkt kopplat till hur vi väljer att resa. Ju mer vi elektrifierar transporter och laddar med grön el, desto närmare kommer vi målet.<br><br>Varje gång du väljer elbuss,eltåg eller elbil bidrar du till en renare energiframtid.</p>
                       </div>
                   </div>
               </div>
@@ -216,7 +212,7 @@
               <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-1"/>
             </div>
             <div class="col-lg-6">
-              <h2 class="sektion-rubrik">Rubrik</h2>
+              <h2>Rubrik</h2>
               <p class="sektion-text">Beskrivande text här</p>
               <button class="sektion-button" onclick="visaSida('statistik')">Se statistik</button>
             </div>
@@ -232,7 +228,7 @@
               <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-2"/>
             </div>
             <div class="col-lg-6 order-lg-1">
-             <h2 class="sektion-rubrik">Rubrik</h2>
+             <h2>Rubrik</h2>
               <p class="sektion-text">Beskrivande text här</p>
               <button class="sektion-button" onclick="visaSida('karta')">Se kartan</button>
             </div>
@@ -245,14 +241,11 @@
     <div id="page-statistik" class="page">
       <div class="container-fluid py-5 px-4">
 
-        <h2 class="section-title">Rubrik</h2>
-        <div class="section-divider"></div>
-
 <!-- LINJE DIAGRAM, TOTALA TRANSPORTUTSLÄPP-->
         <div class="row g-4 mb-4">
           <div class="col-lg-12">
             <div class="diagram-card">
-              <h5>Totala transportutsläpp i Sverige 1990–2024</h5>
+              <h4>Totala transportutsläpp i Sverige 1990–2024</h4>
               <p class="diagram-underrubrik">Sveriges transportutsläpp har minskat med cirka 23% sedan 2007</p>
               <canvas id="transportLine" height="120"></canvas>
 
@@ -261,7 +254,7 @@
                 <i class="bi bi-chevron-down me-1"></i>Läs mer
               </button>
               <div class="las-mer-innehall" style="display:none;">
-                <p class="diagram-text">Transportsektorns utsläpp förändras varje år beroende på hur vi reser, vilka drivmedel som används och hur samhället utvecklas.<br>
+                <p>Transportsektorns utsläpp förändras varje år beroende på hur vi reser, vilka drivmedel som används och hur samhället utvecklas.<br>
                 Under lång tid har vägtrafiken stått för den största delen av transporternas klimatpåverkan, men även flyg och sjöfart bidrar kraftigt till de totala utsläppen.<br>
                 Samtidigt visar utvecklingen att elektrifiering, kollektivtrafik och effektivare transporter kan minska utsläppen över tid.<br>
                 Diagrammet ger en bild om hur snabbt förändringen behöver gå för att klimatmålen ska kunna nås.
@@ -272,11 +265,11 @@
                 <i class="bi bi-chevron-down me-1"></i>Källor & referenser
               </button>
               <div class="las-mer-innehall" style="display:none;">
-                <p class="diagram-text">
+                <p>
                   <strong>Datakälla:</strong><br>
                   <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" target="_blank">SCB - Utsläpp från inrikes transporter</a>
                 </p>
-                <p class="diagram-text">
+                <p>
                   <strong>Referens:</strong><br>
                   Efternamn, F. (år). Artikelnamn. <em>Tidskrift</em>.
                 </p>
@@ -288,7 +281,7 @@
         <div class="row g-4 mb-4">
           <div class="col-lg-12">
             <div class="diagram-card">
-              <h5>Transporter står för ca 35% av Sveriges klimatutsläpp</h5>
+              <h4>Transporter står för ca 35% av Sveriges klimatutsläpp</h4>
               <p class="diagram-underrubrik">Jämförelse mellan transportsektorn och övriga utsläppskällor år 2023</p>
               <div style="height: 400px; max-width: 600px; margin: 0 auto;">
                 <canvas id="transportDonut"></canvas>
@@ -299,7 +292,7 @@
                 <i class="bi bi-chevron-down me-1"></i>Läs mer
               </button>
               <div class="las-mer-innehall" style="display:none;">
-                <p class="diagram-text">En stor del av samhällets växthusgasutsläpp kommer från hur människor och varor förflyttas varje dag.<br>
+                <p>En stor del av samhällets växthusgasutsläpp kommer från hur människor och varor förflyttas varje dag.<br>
                   Bilar, lastbilar, flyg och fartyg använder enorma mängder energi, vilket gör transportsektorn till en av de största utsläppskällorna både i Sverige och globalt.<br>
                   Samtidigt kommer utsläpp också från industrier, energiproduktion, jordbruk och bygge.<br>
                   För att förstå transporternas verkliga påverkan behöver man därför jämföra dem med resten av samhällets utsläpp.<br>
@@ -316,7 +309,7 @@
                   <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" target="_blank">SCB - Utsläpp från inrikes transporter</a><br>
                   <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/TotaltUtslappN/" target="_blank">SCB - Totala utsläpp</a>
                 </p>
-                <p class="diagram-text">
+                <p>
                   <strong>Referens:</strong><br>
                   Efternamn, F. (år). Artikelnamn. <em>Tidskrift</em>.
                 </p>
@@ -328,7 +321,7 @@
         <div class="row g-4 mb-4">
           <div class="col-lg-6">
             <div class="diagram-card">
-              <h5>Vägtrafiken dominerar Sveriges transportutsläpp</h5>
+              <h4>Vägtrafiken dominerar Sveriges transportutsläpp</h4>
               <p class="diagram-underrubrik">Jämförelse av utsläpp mellan olika transportslag år 2023</p>
               <canvas id="transportslagChart"></canvas>
 
@@ -337,7 +330,7 @@
                 <i class="bi bi-chevron-down me-1"></i>Läs mer
               </button>
               <div class="las-mer-innehall" style="display:none;">
-                <p class="diagram-text">Alla transportmedel påverkar klimatet, men inte i samma utsträckning. <br>
+                <p>Alla transportmedel påverkar klimatet, men inte i samma utsträckning. <br>
                 Diagrammet visar hur stora utsläppen från olika transportslag var under 2023.<br>
                 Det blir tydligt att vägtrafiken står för den absolut största delen av transportsektorns klimatpåverkan, medan järnvägen har mycket låga utsläpp i jämförelse.<br>
                 Skillnaderna beror bland annat på:<br>
@@ -358,7 +351,7 @@
                       <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" target="_blank">SCB - Utsläpp från inrikes transporter</a>
                   </div>
                 </p>
-                <p class="diagram-text">
+                <p>
                   <strong>Referens:</strong><br>
                   Efternamn, F. (år). Artikelnamn. <em>Tidskrift</em>.
                 </p>
@@ -368,7 +361,7 @@
 <!-- VÄGTRAFIK UTSLÄPP-->
           <div class="col-lg-6">
             <div class="diagram-card">
-              <h5>Personbilar är vägtrafikens största klimatbov</h5>
+              <h4>Personbilar är vägtrafikens största klimatbov</h4>
               <p class="diagram-underrubrik">Fördelning av utsläpp per fordonstyp inom vägtrafiken år 2023</p>
               <canvas id="vagtrafikChart"></canvas>
 
@@ -377,7 +370,7 @@
                 <i class="bi bi-chevron-down me-1"></i>Läs mer
               </button>
               <div class="las-mer-innehall" style="display:none;">
-                <p class="diagram-text">Diagrammet visar hur utsläppen från olika typer av vägfordon fördelades under 2023. Personbilar står för den största delen av utsläppen, vilket inte är så konstigt eftersom de används varje dag av miljontals människor.<br>
+                <p>Diagrammet visar hur utsläppen från olika typer av vägfordon fördelades under 2023. Personbilar står för den största delen av utsläppen, vilket inte är så konstigt eftersom de används varje dag av miljontals människor.<br>
                   Samtidigt bidrar även lastbilar och andra fordon till en stor del av klimatpåverkan från vägtrafiken.<br>
                   Skillnaderna mellan fordonstyperna beror bland annat på hur många fordon som används,<br>
                   hur långt de kör, vilken typ av bränsle de använder, och hur mycket energi som krävs för att driva dem.
@@ -395,7 +388,7 @@
                       <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" target="_blank">SCB - Utsläpp från inrikes transporter</a>
                   </div>
                 </p>
-                <p class="diagram-text">
+                <p>
                   <strong>Referens:</strong><br>
                   Efternamn, F. (år). Artikelnamn. <em>Tidskrift</em>.
                 </p>
@@ -411,7 +404,63 @@
     <div id="page-karta" class="page"></div>
 
 <!-- OM PROJEKTET SIDA-->
-    <div id="page-om" class="page"></div>
+<div id="page-om" class="page">
+  <div class="container-fluid py-5 px-4">
+
+      <div class="row g-4">
+
+          <!-- OM PROJEKTET -->
+          <div class="col-lg-12">
+              <div class="diagram-card">
+                  <h5>Om Transportutsläpp</h5>
+                  <p>TEXT TEXT TEXT</p>
+              </div>
+          </div>
+
+          <!-- GRUPPEN -->
+          <div class="col-lg-12">
+              <div class="diagram-card">
+                  <h5>Vilka är vi?</h5>
+                  <p>TEXT TEXT TEXT</p>
+                  <div class="d-flex gap-4 flex-wrap mt-3">
+                      <div class="om-person">
+                        <i class="bi bi-person-circle om-avatar-ikon"></i>
+                        <p>Oscar Nilsson Ljungdell</p>
+                      </div>
+                      <div class="om-person">
+                        <i class="bi bi-person-circle om-avatar-ikon"></i>
+                        <p>Omar Hussain</p>
+                      </div>
+                      <div class="om-person">
+                        <i class="bi bi-person-circle om-avatar-ikon"></i>
+                        <p>Sandra Eriksson</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- KÄLLOR -->
+          <div class="col-lg-12">
+              <div class="diagram-card">
+                  <h5>Källor & referenser</h5><br>
+
+                  <h6>Datakällor</h6>
+                  <div class="d-flex flex-column gap-2 mb-4">
+                      <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" target="_blank" class="om-kalla">SCB – Utsläpp från inrikes transporter</a>
+                      <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/TotaltUtslappN/" target="_blank" class="om-kalla">SCB – Totala utsläpp</a>
+                  </div>
+
+                  <h6>Övriga källor</h6>
+                  <div class="d-flex flex-column gap-2">
+                      <a href="https://www.naturvardsverket.se/amnesomraden/klimatomstallningen/sveriges-klimatarbete/sveriges-klimatmal-och-klimatpolitiska-ramverk/" target="_blank" class="om-kalla">Naturvårdsverket – Sveriges klimatmål</a>
+                      <a href="https://globalamalen.se" target="_blank" class="om-kalla">globalamalen.se – FN:s globala mål</a>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
 
 <!-- TILL TOPPEN KNAPP-->
     <button class="till-toppen" id="tillToppen">
@@ -420,7 +469,7 @@
 
 <!-- FOOTER-->
     <footer>
-      <p>GIK373 Projektarbete 2026 · Grupp 7</p>
+      <p>© Transportutsläpp</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
