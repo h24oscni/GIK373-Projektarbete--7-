@@ -298,6 +298,18 @@ function createDonut(transport, ovrigt) {
   });
 }
 
+// LÄS MER KNAPP PÅ FRAMSIDAN
+function visaStatistikLasMer() {
+  visaSida('statistik');
+  
+  setTimeout(() => {
+      const diagram = document.getElementById('transportLine');
+      diagram.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      const lasMerKnapp = diagram.closest('.diagram-card').querySelector('.las-mer-knapp');
+      if (lasMerKnapp) lasMer(lasMerKnapp);
+  }, 300);
+}
 
 // TILL TOPPEN KNAPP
 const toTopButton = document.getElementById('tillToppen');
@@ -354,17 +366,16 @@ function visaKallor(knapp) {
   }
 }
 
-// HOVER KORTEN UNDER HERO
-const faktaKort = document.querySelectorAll('.info-kort');
+// KORTEN UNDER HERO
+document.querySelectorAll('.info-wrap').forEach((kort) => {
+  kort.addEventListener('click', () => {
+      kort.classList.toggle('aktiv');
+  });
+});
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.classList.add('synlig');
-            }, index * 150);
-        }
-    });
-}, { threshold: 0.1 });
-
-faktaKort.forEach((kort) => observer.observe(kort));
+// ÖPPNA NY LÄNK
+function öppnaLänk(url) {
+  if (confirm('Du kommer lämna sidan. Vill du öppna länken i en ny flik?')) {
+    window.open(url, '_blank');
+  }
+}
