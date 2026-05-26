@@ -379,3 +379,66 @@ function öppnaLänk(url) {
     window.open(url, '_blank');
   }
 }
+
+// KARTAN
+const urlKarta =
+  'https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_air_gge?format=JSON&lang=en&src_crf=CRF1A3&unit=THS_T&airpol=GHG&time=2022';
+
+async function visaKarta() {
+  const data = await fetch(urlKarta).then((res) => res.json());
+  console.log(data);
+
+  const geoIndex = data.dimension.geo.category.index;
+  const geoLabels = data.dimension.geo.category.label;
+  const values = data.value;
+
+  const lander = Object.keys(geoIndex);
+  const utslapp = lander.map((land) => values[geoIndex[land]] || 0);
+  const landerNamn = lander.map((land) => geoLabels[land]);
+
+  const kartaData = [{
+    type: 'choropleth',
+    locationmode: 'ISO-3',
+    locations: lander.map((land) => landKod(land)),
+    z: utslapp,
+    text: landerNamn,
+    colorscale: [
+      [0, '#f0faf2'],
+      [0.1, '#95d5b2'],
+      [0.3, '#52b788'],
+      [0.6, '#2d6a4f'],
+      [1, '#1a3a2a']
+    ],
+    zmin: 0,
+    zmax: 150000,
+    colorbar: {
+      title: 'kt CO₂-ekv.'
+    }
+  }];
+
+  const layout = {
+    geo: {
+      scope: 'europe',
+    },
+    height: 600,
+    autosize: true,
+  }
+  
+  Plotly.newPlot('kartaDiagram', kartaData, layout, { responsive: true});
+}
+
+function landKod(kod2) {
+  const koder = {
+    'AT': 'AUT', 'BE': 'BEL', 'BG': 'BGR', 'CY': 'CYP',
+    'CZ': 'CZE', 'DE': 'DEU', 'DK': 'DNK', 'EE': 'EST',
+    'EL': 'GRC', 'ES': 'ESP', 'FI': 'FIN', 'FR': 'FRA',
+    'HR': 'HRV', 'HU': 'HUN', 'IE': 'IRL', 'IT': 'ITA',
+    'LT': 'LTU', 'LU': 'LUX', 'LV': 'LVA', 'MT': 'MLT',
+    'NL': 'NLD', 'PL': 'POL', 'PT': 'PRT', 'RO': 'ROU',
+    'SE': 'SWE', 'SI': 'SVN', 'SK': 'SVK', 'NO': 'NOR',
+    'IS': 'ISL', 'LI': 'LIE'
+  };
+  return koder[kod2] || kod2;
+}
+
+visaKarta();
