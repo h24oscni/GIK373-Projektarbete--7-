@@ -50,24 +50,23 @@
      <div id="page-hem" class="page active">
       <div class="hero">
         <video class="hero-video" autoplay muted loop playsinline>
-          <source src="images/hero.mp4" type="video/mp4">
+          <source src="images/hero.hem.video.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1>Hur mycket påverkar våra resor klimatet?</h1>
           <p>Varje dag rör vi oss mellan platser.<br>
-            Till jobbet. Skolan. Vänner. Semesterresor.<br>
-            
-            Men bakom varje resa finns något vi sällan ser:
-            ett klimatavtryck.
+              Till jobbet. Skolan. Vänner. Semesterresor.<br>
+              Men bakom varje resa finns något vi sällan ser: ett klimatavtryck.
           </p>
         </div>
-      </div>
-
+    </div>
+    <div class="container-fluid">
+      
 <!-- FAKTARUTOR -->
 <div class="px-4 mt-5 mb-5">
   <h4>Sveriges transportutsläpp i siffror</h4>
-  <p class="diagram-underrubrik">Klicka på ikonenerna för att lära dig mer</p>
+  <p class="diagram-underrubrik">Klicka på korten för att lära dig mer</p>
   <div class="row g-3" id="infoRutor">
 
     <div class="col-lg-3 col-sm-6 info-kort">
@@ -138,7 +137,7 @@
       <div class="col-lg-4 d-flex flex-column justify-content-center">
         <h4 class="mt-2">Utsläppen minskar, men räcker det för att nå målen 2030?</h4>
         <p>Sveriges transportutsläpp har minskat med <strong>23%</strong> sedan toppåret 2007. Men för att nå klimatmålet till 2030 behöver takten öka kraftigt.</p>
-        <button class="sektion-button" onclick="visaStatistikLasMer()">Läs mer</button>
+        <button class="sektion-button" onclick="visaStatistikLasMer()">Utforska utsläppsstatistiken</button>
       </div>
 
 
@@ -165,7 +164,7 @@
                   <div class="globalt-mal-ikon" style="background:#387540;">13</div>
                   <div>
                       <h6>Klimatåtgärder</h6>
-                      <p class="globalt-mal-text">Små val som kan göra stor skillnad för klimatet</p>
+                      <p>Små val som kan göra stor skillnad för klimatet</p>
                       <button class="las-mer-knapp" onclick="lasMer(this)">
                           <i class="bi bi-chevron-down me-1"></i>Läs mer
                       </button>
@@ -183,7 +182,7 @@
                   <div class="globalt-mal-ikon" style="background:#fc8f3a;">11</div>
                   <div>
                       <h6>Hållbara städer</h6>
-                      <p class="globalt-mal-text">Din resa påverkar staden du bor i</p>
+                      <p>Din resa påverkar staden du bor i</p>
                       <button class="las-mer-knapp" onclick="lasMer(this)">
                           <i class="bi bi-chevron-down me-1"></i>Läs mer
                       </button>
@@ -200,7 +199,7 @@
                   <div class="globalt-mal-ikon" style="background:#fbba3a;">7</div>
                   <div>
                       <h6>Hållbar energi</h6>
-                      <p class="globalt-mal-text">Ladda bilen med grön el</p>
+                      <p>Ladda bilen med grön el</p>
                       <button class="las-mer-knapp" onclick="lasMer(this)">
                           <i class="bi bi-chevron-down me-1"></i>Läs mer
                       </button>
@@ -216,45 +215,32 @@
 </div>
 
 
-<!-- SEKTION 1-->
+<!-- SEKTION KARTA-->
       <div class="px-4 mb-5">
         <div class="diagram-card">
           <div class="row g-5 align-items-start">
             <div class="col-lg-6">
-              <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-1"/>
+              <img src="images/europakarta.jpg" alt="Beskrivning" class="sektion-bild-1"/>
             </div>
             <div class="col-lg-6">
-              <h2>Rubrik</h2>
-              <p class="sektion-text">Beskrivande text här</p>
-              <button class="sektion-button" onclick="visaSida('statistik')">Se statistik</button>
+              <h4>Få en inblick i Europas väg mot att nå klimatmålen</h4>
+              <p class="sektion-text">Vi har en interaktiv karta som ger dig en geografisk översikt över transportsektorns växthusutsläpp i Europa år 2022. Genom att jämföra länderna kan du visualisera skillnaderna i utsläppintensitet och börja utforska hur Europas gemensamma handelsrutter, skiftande klimatförhållanden och gränsöverskridande livscykler formar vårt europeiska klimatavtryck.</p>
+              <button class="sektion-button" onclick="visaSida('karta')">Utforska Europa-kartan</button>
             </div>
           </div>
         </div>
       </div>
-      
-<!-- SEKTION 2-->
-      <div class="px-4 mb-5">
-        <div class="diagram-card">
-          <div class="row g-5 align-items-start">
-            <div class="col-lg-6 order-lg-2">
-              <img src="images/hero.avif" alt="Beskrivning" class="sektion-bild-2"/>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-             <h2>Rubrik</h2>
-              <p class="sektion-text">Beskrivande text här</p>
-              <button class="sektion-button" onclick="visaSida('karta')">Se kartan</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    </div> 
+  </div>
 <!-- STATISTIK SIDA-->
     <div id="page-statistik" class="page">
-      <div class="hero-statistik">
-        <h1>Varje resa lämnar ett avtryck</h1>
-        <p>Transportsektorn står för ca 35% av Sveriges klimatutsläpp. En av våra största utmaningar i klimatomställningen.<br>Här kan du följa utsläppstrenderna över tid, se hur olika fordonstyper påverkar klimatet och förstå varför personbilar dominerar vägtrafikens utsläpp.</p>
-      </div>
+        <div class="hero-undersida hero-statistik">
+            <div class="hero-undersida-content">
+                <h1>Varje resa lämnar ett avtryck</h1>
+                <p>Här kan du följa utsläppstrenderna över tid, se hur olika fordonstyper påverkar klimatet och förstå varför personbilar dominerar vägtrafikens utsläpp.</p>
+            </div>
+        </div>
+
         <div class="container-fluid py-5 px-4">
 <!-- LINJE DIAGRAM, TOTALA TRANSPORTUTSLÄPP-->
         <div class="row g-4 mb-5">
@@ -294,9 +280,9 @@
             </div>
           </div>
         </div>
-<!-- TRANSPORT VS ÖVRIGA UTSLÄPP, DONUT-->
+<!-- DONUT + TRANSPORTSLAG-->
         <div class="row g-4 mb-5">
-          <div class="col-lg-12">
+          <div class="col-lg-6">
             <div class="diagram-card">
               <h4>Transporter står för ca 35% av Sveriges klimatutsläpp</h4>
               <p class="diagram-underrubrik">Jämförelse mellan transportsektorn och övriga utsläppskällor år 2023</p>
@@ -334,14 +320,12 @@
               </div>
             </div>
           </div>
-        </div>
-<!-- TRANSPORTUTSLÄPP PER TRANSPORTSLAG-->
-        <div class="row g-4 mb-5">
+        
           <div class="col-lg-6">
             <div class="diagram-card">
               <h4>Vägtrafiken dominerar Sveriges transportutsläpp</h4>
               <p class="diagram-underrubrik">Jämförelse av utsläpp mellan olika transportslag år 2023</p>
-              <canvas id="transportslagChart"></canvas>
+              <canvas id="transportslagChart" height="200"></canvas>
 
               <!-- LÄS MER-->
               <button class="las-mer-knapp" onclick="lasMer(this)">
@@ -376,11 +360,11 @@
             </div>
           </div>
 <!-- VÄGTRAFIK UTSLÄPP-->
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="diagram-card">
               <h4>Personbilar är vägtrafikens största klimatbov</h4>
               <p class="diagram-underrubrik">Fördelning av utsläpp per fordonstyp inom vägtrafiken år 2023</p>
-              <canvas id="vagtrafikChart"></canvas>
+              <canvas id="vagtrafikChart" height="150"></canvas>
 
               <!-- LÄS MER-->
               <button class="las-mer-knapp" onclick="lasMer(this)">
@@ -418,13 +402,14 @@
       </div>
     </div>
 
-
 <!-- KARTA SIDA-->
 <div id="page-karta" class="page">
-  <div class="hero hero-statistik">
-      <h1>Karta</h1>
-      <p>Hur ligger Sverige till jämför med resten av Europa?</p>
-  </div>
+    <div class="hero-undersida hero-karta">
+        <div class="hero-undersida-content">
+            <h1>Klimatavtrycket på kartan: Transportutsläpp i Europa</h1>
+            <p>Utsläpp känner inga landsgränser. Även om varje land har sina unika förutsättningar, är transportsektorn en gemensam europeisk utmaning som idag står för ungefär en fjärdedel av EU:s totala koldioxidutsläpp.</p>
+        </div>
+    </div>
   <div class="container-fluid py-5 px-4">
       <div class="diagram-card">
           <h4>Transportutsläpp per land i Europa 2022</h4>
@@ -436,8 +421,11 @@
               <i class="bi bi-chevron-down me-1"></i>Läs mer
           </button>
           <div class="las-mer-innehall" style="display:none;">
-              <p>TEXT</p>
-          </div>
+                <p>Kartan ger en visuell översikt av hur transportrelaterade utsläpp fördelade sig i Europa år 2022. Enligt officiell statistik från Europaparlamentet (2024) står transporter för ungefär en fjärdedel av EU:s totala koldioxidutsläpp, varav vägtransporterna dominerar stort och står för hela 71,7 procent av dessa utsläpp. Skillnaderna i utsläppsmängd mellan länderna på kartan speglar hur denna utmaning ser ut i praktiken.</p>
+                <p>De utsläppsnivåer som registreras i de olika europeiska länderna påverkas i hög grad av lokala klimat- och miljöfaktorer. Forskning av Liu et al. (2016) visar att regionala väderförhållanden och temperaturer har en mätbar effekt på transportsektorns koldioxidutsläpp. I kalla nordeuropeiska regioner kan exempelvis lägre temperaturer och nederbörd under vinterhalvåret öka fordonens rullmotstånd och bränsleförbrukning, samtidigt som dåligt väder minskar andelen aktiva transporter (exempelvis gång och cykling). Detta kan skapa geografiska skillnader i statistiken som direkt speglas i kartan (Liu et al., 2016).</p>
+                <h6>Vad kan vi göra för att förbättra utvecklingen?</h6>
+                <p>Utsläppsmönstren på kartan för år 2022 är nära länkade till kontinentens gemensamma handelsrutter och transittrafik. Europaparlamentet (2024) betonar att EU har som mål att minska växthusgasutsläppen från transporter med 90 procent till år 2050 jämfört med 1990. För att länderna på kartan ska kunna röra sig mot detta mål krävs de typer av konkreta omställningsscenarier för tunga transporter som Holmgren et al. (2025) beskriver, fast på hel europeisk skala. Ett storskalat införande av förnybara drivmedel i hela unionen är avgörande för att bryta den historiska trenden och uppnå ett klimatneutralt Europa (Holmgren et al., 2025).</p>
+            </div>
 
           <!-- REFERENSER -->
           <button class="las-mer-knapp" onclick="visaKallor(this)">
@@ -449,7 +437,10 @@
                     <a href="#" onclick="öppnaLänk('https://ec.europa.eu/eurostat/databrowser/view/env_air_gge/default/table?lang=en')">Eurostat – Greenhouse gas emissions by source sector (env_air_gge)</a>
               </p>
               <p><strong>Referens:</strong><br>
-                  <p>KÄLLA TEXT</p>
+                <p>Europaparlamentet. (2024, 9 december). <em>Koldioxidutsläpp från bilar i siffror (nyhetsgrafik)</em> (Artikel 20190313STO31218). Generaldirektoratet för kommunikation.</p>
+                <p>Holmgren, K., Chen, B. H., Wickman, C., Hansson, J., Malmgren, E., Olsson, M., & Lundblad, M. (2025). <em>Transportrelaterade utsläpp av växthusgaser för godstransporter i Sverige: Nutid och scenarier under omställning för att nå klimatmål</em> (Slutrapport Triple F 2022.5.2.3). RISE & IVL.</p>
+                <p>Liu, C., Susilo, Y. O., & Karlström, A. (2016). Estimating changes in transport CO2 emissions due to changes in weather and climate in Sweden. <em>Transportation Research Part D: Transport and Environment</em>, <em>49</em>, 172–187.</p>
+                <p>Lund, E., & Sundberg, I. (2016). <em>Transportsektorns klimatpåverkan ur ett livscykelperspektiv: En forskningsöversikt</em> (Trivector Rapport 2016:84). Trivector.</p>
               </p>
           </div>      
       </div>
@@ -479,7 +470,7 @@
           <div class="col-lg-12">
               <div class="diagram-card">
                   <h4>Vilka är vi?</h4>
-                  <p>TEXT TEXT TEXT</p>
+                  <p>Vi är tre studenter från Högskolan Dalarna som vill väcka intresse för transportutsläpp och dess miljöpåverkan. Genom att ha tagit fram relevant data och akademiska källor har vi skapat en hemsida där du som individ kan läsa mer om de eventuella utsläppen du bidrar med till klimatavtrycket i Sverige. Vi vill kunna ge dig möjligheten att känna dig informerad om ämnet, och kunna göra klimatsmarta val för att hjälpa oss alla nå de globala målen för hållbar utveckling.</p>
                   <div class="d-flex gap-4 flex-wrap mt-3">
                       <div class="om-person">
                         <i class="bi bi-person-circle om-avatar-ikon"></i>
@@ -506,12 +497,28 @@
                   <div class="d-flex flex-column gap-2 mb-5">
                       <a href="#" onclick="öppnaLänk('https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/')" class="om-kalla">SCB – Utsläpp från inrikes transporter</a>
                       <a href="#" onclick="öppnaLänk('https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/TotaltUtslappN/')"class="om-kalla">SCB – Totala utsläpp</a>
+                      <a href="#" onclick="öppnaLänk('https://ec.europa.eu/eurostat/databrowser/view/env_air_gge/default/table?lang=en')" class="om-kalla">Eurostat – Greenhouse gas emissions by source sector</a>
                   </div>
 
-                  <h6>Övriga källor</h6>
-                  <div class="d-flex flex-column gap-2">
+                  <h6>Referenser</h6>
+                  <div class="d-flex flex-column gap-2 mb-5">
                       <a href="#" onclick="öppnaLänk('https://www.naturvardsverket.se/amnesomraden/klimatomstallningen/sveriges-klimatarbete/sveriges-klimatmal-och-klimatpolitiska-ramverk/')" class="om-kalla">Naturvårdsverket – Sveriges klimatmål</a>
                       <a href="#" onclick="öppnaLänk('https://globalamalen.se')" class="om-kalla">globalamalen.se – FN:s globala mål</a>
+                  </div>
+
+                  <h6>Vetenskapliga referenser</h6>
+                  <div class="d-flex flex-column gap-2 mb-5">
+                      <p class="om-kalla-text">Holmgren, K., Chen, B. H., Wickman, C., Hansson, J., Malmgren, E., Olsson, M., & Lundblad, M. (2025). <em>Transportrelaterade utsläpp av växthusgaser för godstransporter i Sverige: Nutid och scenarier under omställning för att nå klimatmål</em> (Slutrapport Triple F 2022.5.2.3). RISE & IVL.</p>
+                      <p class="om-kalla-text">Liu, C., Susilo, Y. O., & Karlström, A. (2016). Estimating changes in transport CO2 emissions due to changes in weather and climate in Sweden. <em>Transportation Research Part D: Transport and Environment</em>, <em>49</em>, 172–187.</p>
+                      <p class="om-kalla-text">Lund, E., & Sundberg, I. (2016). <em>Transportsektorns klimatpåverkan ur ett livscykelperspektiv: En forskningsöversikt</em> (Trivector Rapport 2016:84). Trivector.</p>
+                      <p class="om-kalla-text">Europaparlamentet. (2024, 9 december). <em>Koldioxidutsläpp från bilar i siffror (nyhetsgrafik)</em> (Artikel 20190313STO31218). Generaldirektoratet för kommunikation.</p>
+                  </div>
+                  <h6>Bilder & video</h6>
+                  <div class="d-flex flex-column gap-2 mb-5">
+                    <a href="#" onclick="öppnaLänk('https://www.pexels.com/video/aerial-view-of-a-winding-road-in-the-mountains-26562898/')" class="om-kalla">Pexels – Flygbild över slingrande bergsväg (framsidan)</a>
+                    <a href="#" onclick="öppnaLänk('https://www.pexels.com/sv-se/foto/flygplan-resa-skugga-karta-8828679/')" class="om-kalla">Pexels – Satellitvy över stad (framsidan, kartsektion)</a>
+                      <a href="#" onclick="öppnaLänk('https://www.pexels.com/sv-se/foto/vag-manniskor-cyklar-utomhus-5807581/')" class="om-kalla">Pexels – Cyklister på väg (statistiksidan)</a>
+                      <a href="#" onclick="öppnaLänk('https://www.pexels.com/sv-se/foto/bilar-vag-trafik-nederlanderna-14218850/')" class="om-kalla">Pexels – Bilar på väg (kartsidan)</a>
                   </div>
               </div>
           </div>

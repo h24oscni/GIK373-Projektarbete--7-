@@ -420,8 +420,9 @@ async function visaKarta() {
     geo: {
       scope: 'europe',
     },
-    height: 600,
+    height: 800,
     autosize: true,
+    margin: {l: 0, r: 0, t: 0, b: 0}
   }
   
   Plotly.newPlot('kartaDiagram', kartaData, layout, { responsive: true});
